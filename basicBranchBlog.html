@@ -1,1 +1,204 @@
+<!DOCTYPE html>
+<html>
 
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Basic Github branch management : How to create and merge Github branches using Android Studio">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Basic Github branch management</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/maanmehta">View on GitHub</a>
+
+          <h1 id="project_title">Basic Github branch management</h1>
+          <h2 id="project_tagline">How to create and merge Github branches using Android Studio</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="about-this-tutorial" class="anchor" href="#about-this-tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About this tutorial</h1>
+
+<p>It is an established best practice not to directly make code changes on the master branch. This holds true, even if you are the only developer working on the project. When you want to make some code changes, you should create a new "work" branch from your <code>master</code> branch, make your code changes to the new <code>work</code> branch, complete your testing and when you are done, merge changes in your <code>work</code> branch to the <code>master</code> branch and now you can safely delete your work branch.</p>
+
+<p>This tutorial gives step-by-step instructions on how to do basic Github branch management from Android Studio. I will cover the following topics:</p>
+
+<ol>
+<li>Create a new <code>work</code> branch from <code>master</code> branch</li>
+<li>Make code changes on <code>work</code> branch, commit and push your commits to the Github server</li>
+<li>Switch between your branches and see that you get different codebase in Android Studio</li>
+<li>Merge your <code>work</code> branch to <code>master</code> branch and push your changes (the merge) to the Github server</li>
+<li>Delete your both <code>work</code> branches - local and remote</li>
+</ol>
+
+<h1>
+<a id="1-create-a-new-work-branch-from-master-branch" class="anchor" href="#1-create-a-new-work-branch-from-master-branch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Create a new <code>work</code> branch from <code>master</code> branch</h1>
+
+<h2>
+<a id="android-studio" class="anchor" href="#android-studio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android Studio</h2>
+
+<ul>
+<li>From the status bar at the bottom of Android Studio, click <strong>Git:master</strong> and then click <strong>New Branch</strong>
+</li>
+<li>Enter <code>work</code> as the name of the new branch and click <strong>OK</strong>
+</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/newbranch01.png" alt="Current Weather"></p>
+
+<p><br>
+<br></p>
+
+<p><img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/newbranch02.png" alt="Current Weather"></p>
+
+<p><br>
+<br></p>
+
+<p>This will create a new local <code>work</code> branch and switch your Android Studio to this new local branch as you can see in the screenshot below:</p>
+
+<p><br>
+<br></p>
+
+<p><img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/newbranch03.png" alt="Current Weather"></p>
+
+<p><br>
+<br></p>
+
+<p>In the background, Android Studio used Git to created a new local <code>work</code> branch using the code snapshot from the local <code>master</code> branch and automatically checks out the new local <code>work</code> branch ready for you to start making code changes in Android Studio.</p>
+
+<p>But, this new branch does not yet exist on the remote Github server. In other words, we now have a Local Branch called <code>work</code> but there is no "Remote Branch" called <code>work</code> yet on the Github server. In order to do that, we need to <strong>Push</strong> our local changes to the server. Execute the Git Push** for the changes (new work branch) to be replicated to the (Github) server. That will push the local <code>work</code> branch to a new remote <code>work</code> branch on the server.</p>
+
+<p><img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/pushedNewWorkBranch.png" alt="Current Weather"></p>
+
+<p>After the <strong>Push</strong>, you can browse the codebase of the new remote <code>work</code> branch on the Github website as follows:</p>
+
+<ul>
+<li>Logon to Github website</li>
+<li>Browse to your repository.
+
+<ul>
+<li>Your repository dashboard on Github website will show the number of branches in your repository and in this case and as shown in the screenshot below it should be <strong>2 Branches</strong><br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/2Branches.png" alt="Current Weather"><br><br>
+</li>
+<li>Click on <strong>2 Branches</strong> and then click <strong>All Branches</strong> to view your branches<br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/allBranches.png" alt="Current Weather"><br><br>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="2-make-code-changes-on-local-work-branch-commit-your-changes-and-push-your-commits-to-the-github-server" class="anchor" href="#2-make-code-changes-on-local-work-branch-commit-your-changes-and-push-your-commits-to-the-github-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Make code changes on local <code>work</code> branch, commit your changes and push your commits to the (Github) server</h1>
+
+<p>Now, while you are using the local <code>work</code> branch, make some code changes and Commit and <strong>Push</strong> to the (Github) server. Note that unless you <em>Push</em>, your changes will remain in your local branch and will not be copied (pushed) to the remote <code>work</code> branch on the Github server.</p>
+
+<h3>
+<a id="verify-that-your-changes-have-been-pushed-to-the-remote-work-branch-on-the-github-server" class="anchor" href="#verify-that-your-changes-have-been-pushed-to-the-remote-work-branch-on-the-github-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Verify that your changes have been pushed to the remote <code>work</code> branch on the Github server</h3>
+
+<ul>
+<li>Login to Github website and browse to your repository and you will find that your new code changes are not there in the default <code>master</code> branch. This is correct because we made changes and did a Commit and <strong>Push</strong> but we did this in the <code>work</code> branch. So, these changes should not be in the <code>master</code> branch but actually in the <code>work</code> branch.</li>
+<li>Switch to the new <code>work</code> branch on the Github website and viola, your changes are there.</li>
+</ul>
+
+<p><br>
+<br></p>
+
+<p><img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/switchToWork01.png" alt="Current Weather"></p>
+
+<p><br>
+<br></p>
+
+<h1>
+<a id="3-switch-between-your-branches-and-see-that-you-get-different-codebase-in-android-studio" class="anchor" href="#3-switch-between-your-branches-and-see-that-you-get-different-codebase-in-android-studio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Switch between your branches and see that you get different codebase in Android Studio</h1>
+
+<ul>
+<li>Switch between your remote branches on the Github website and you will notice the differences in the code base between the <code>work</code> and the <code>master</code> branch.</li>
+<li>You can do the same for local branches on Android Studio as follows
+
+<ul>
+<li>Switch your active branch on Android Studio back to your local <code>master</code> branch - From the status bar, click on <strong>Git:work</strong> which is your current branch in Android Studio, and select <strong>master -&gt; origin/master</strong> under the <strong>Local Branches</strong> section and click <strong>Checkout</strong>. You can now verify that the code base in Android Studio shows your code that was in local <code>master</code> branch and does not have the changes you made and commited to the local <code>work</code> branch.<br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/checkoutMaster01.png" alt="Current Weather"><br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/checkedoutMaster01.png" alt="Current Weather"><br><br>
+</li>
+<li>Now, switch back to the local <code>work</code> branch on Android Studio - From the status bar, click on <strong>Git:master</strong> which is your current branch in Android Studio, and select <strong>work -&gt; origin/work</strong> under the <strong>Local Branches</strong> section and click <strong>Checkout</strong>. You can now verify that the code base in Android Studio shows your code that is in the <code>work</code> branch and has all the changes you made and commited to the <code>work</code> branch.<br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/checkoutWork01.png" alt="Current Weather"><br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/checkedoutWork01.png" alt="Current Weather"><br><br>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="4-merge-your-local-work-branch-to-local-master-branch-and-push-your-changes-the-merge-to-the-remote-master-branch-on-the-server" class="anchor" href="#4-merge-your-local-work-branch-to-local-master-branch-and-push-your-changes-the-merge-to-the-remote-master-branch-on-the-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Merge your local <code>work</code> branch to local <code>master</code> branch and push your changes (the merge) to the remote <code>master</code> branch on the server</h1>
+
+<p>When you want to merge your code changes from branch B to branch A, you have to switch (checkout) to branch A and then execute the merge command and select Branch B. Git will then marge the current codebase of the Branch B to Branch A. And now, the codebase of branches A and B will be same. Keep in mind, at this point, all of this merge has been done to your branches A and B that are local to your computer and has not been pushed to their corresponding remote branches on the Github server. Therefore, you will need to execute a Git Push from your local computer (e.g. your Android Studio). Here are the steps that you can execute to merge all the commits you have made on your <code>work</code> branch to the <code>master</code> branch:</p>
+
+<ul>
+<li>Switch your branches on the Github website and you will notice the differences in the code base between the <code>work</code> and the <code>master</code> branch.</li>
+<li>You can do the same on Android Studio as follows:
+
+<ul>
+<li>Switch your active branch on Android Studio back to the local <code>master</code> branch - From the status bar, click on <strong>Git:work</strong> which is your current branch in Android Studio, and select <strong>master -&gt; origin/master</strong> under the <strong>Local Branches</strong> section and click <strong>Checkout</strong>
+</li>
+<li>Now execute merge of <code>work</code> branch to the <code>master</code> branch as follows - From the status bar, click on <strong>Git:master</strong> which is your current branch in Android Studio, and select <strong>work -&gt; origin/work</strong> under the <strong>Local Branches</strong> section and click <strong>Merge</strong><br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/merge01.png" alt="Current Weather"><br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/mergedWorkToMaster01.png" alt="Current Weather"><br><br>
+</li>
+<li>At this point, even though it seems that your merge has been completed, but it has only been completed on your local branches and has not been pushed to the remote branches on the Github server. You can verify this by checking on the Github website and you will notice that indeed the changes from the <code>work</code> branch have not been reflected on the remote <code>master</code> branch on the server.</li>
+<li>Execute <code>Push</code> to merge your changes to the Github server</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="5-delete-both-local-and-remote-work-branches" class="anchor" href="#5-delete-both-local-and-remote-work-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Delete both local and remote <code>work</code> branches</h1>
+
+<p>Usually once a working branch is merged with the <code>master</code> branch and changes pushed to the remote <code>master</code> branch, the purpose of the <code>work</code> branch is done and we should delete it. One thing we need to be remember is that for branch deletion, we need to separately delete both local and remote copies of the <code>work</code> branch. We cannot just simply delete the local <code>work</code> branch and then expect that remote branch will be delete by a Git Push. We have to delete both local and remote branches as two seperate steps as follows:</p>
+
+<ul>
+<li>
+<p>Delete local `work' branch as follows:</p>
+
+<ul>
+<li><p>Either click on <strong>Delete work</strong> link in the <em>merge</em> confirmation message<br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/mergedWorkToMaster01.png" alt="Current Weather"><br><br></p></li>
+<li><p>OR, from the status bar, click on <strong>Git:master</strong> which is your current branch in Android Studio, and then under the <strong>Local Branches</strong>, select <strong>work -&gt; origin/work</strong> and click <strong>Delete</strong>. This will delete the "local" <code>work</code> branch only and not the "remote" <code>work</code> branch on the Github server<br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/deleteLocalWork.png" alt="Current Weather"><br><br></p></li>
+</ul>
+</li>
+<li>
+<p>Delete the remote <code>work</code> branch as follows:</p>
+
+<ul>
+<li><p>Using Android Studio - From the status bar, click on <strong>Git:master</strong> which is your current branch in Android Studio, and then under the <strong>Remote Branches</strong>, select <strong>origin/work</strong> and click <strong>Delete</strong>. This will delete the remote <code>work</code> branch from the Github server<br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/deleteWorkRemote.png" alt="Current Weather"><br><br>
+<img src="https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/remoteWorkBranchDeleted.png" alt="Current Weather"><br><br></p></li>
+<li><p>Or using Github website - Browse to your repository on Github website and select the appropriate remote branch to delete</p></li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
