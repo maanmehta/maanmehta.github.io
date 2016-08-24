@@ -40,7 +40,7 @@
 </ol>
 
 <h1>
-<a id="1-create-a-new-work-branch-from-master-branch" class="anchor" href="#1-create-a-new-work-branch-from-master-branch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Create a new <code>work</code> branch from <code>master</code> branch</h1>
+<a id="1-create-a-new-work-branch-from-master-branch" class="anchor" href="#1-create-a-new-work-branch-from-master-branch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Create a new work branch from master branch</h1>
 
 <h2>
 <a id="android-studio" class="anchor" href="#android-studio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Android Studio</h2>
@@ -96,7 +96,7 @@
 </ul>
 
 <h1>
-<a id="2-make-code-changes-on-local-work-branch-commit-your-changes-and-push-your-commits-to-the-github-server" class="anchor" href="#2-make-code-changes-on-local-work-branch-commit-your-changes-and-push-your-commits-to-the-github-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Make code changes on local <code>work</code> branch, commit your changes and push your commits to the (Github) server</h1>
+<a id="2-make-code-changes-on-local-work-branch-commit-your-changes-and-push-your-commits-to-the-github-server" class="anchor" href="#2-make-code-changes-on-local-work-branch-commit-your-changes-and-push-your-commits-to-the-github-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Make code changes on local work branch, commit your changes and push your commits to the Github server</h1>
 
 <p>Now, while you are using the local <code>work</code> branch, make some code changes and Commit and <strong>Push</strong> to the (Github) server. Note that unless you <em>Push</em>, your changes will remain in your local branch and will not be copied (pushed) to the remote <code>work</code> branch on the Github server.</p>
 
@@ -137,7 +137,7 @@
 </ul>
 
 <h1>
-<a id="4-merge-your-local-work-branch-to-local-master-branch-and-push-your-changes-the-merge-to-the-remote-master-branch-on-the-server" class="anchor" href="#4-merge-your-local-work-branch-to-local-master-branch-and-push-your-changes-the-merge-to-the-remote-master-branch-on-the-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Merge your local <code>work</code> branch to local <code>master</code> branch and push your changes (the merge) to the remote <code>master</code> branch on the server</h1>
+<a id="4-merge-your-local-work-branch-to-local-master-branch-and-push-your-changes-the-merge-to-the-remote-master-branch-on-the-server" class="anchor" href="#4-merge-your-local-work-branch-to-local-master-branch-and-push-your-changes-the-merge-to-the-remote-master-branch-on-the-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Merge your local work branch to local master branch and push your changes (the merge) to the remote master branch on the server</h1>
 
 <p>When you want to merge your code changes from branch B to branch A, you have to switch (checkout) to branch A and then execute the merge command and select Branch B. Git will then marge the current codebase of the Branch B to Branch A. And now, the codebase of branches A and B will be same. Keep in mind, at this point, all of this merge has been done to your branches A and B that are local to your computer and has not been pushed to their corresponding remote branches on the Github server. Therefore, you will need to execute a Git Push from your local computer (e.g. your Android Studio). Here are the steps that you can execute to merge all the commits you have made on your <code>work</code> branch to the <code>master</code> branch:</p>
 
@@ -159,7 +159,7 @@
 </ul>
 
 <h1>
-<a id="5-delete-both-local-and-remote-work-branches" class="anchor" href="#5-delete-both-local-and-remote-work-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Delete both local and remote <code>work</code> branches</h1>
+<a id="5-delete-both-local-and-remote-work-branches" class="anchor" href="#5-delete-both-local-and-remote-work-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Delete both local and remote work branches</h1>
 
 <p>Usually once a working branch is merged with the <code>master</code> branch and changes pushed to the remote <code>master</code> branch, the purpose of the <code>work</code> branch is done and we should delete it. One thing we need to be remember is that for branch deletion, we need to separately delete both local and remote copies of the <code>work</code> branch. We cannot just simply delete the local <code>work</code> branch and then expect that remote branch will be delete by a Git Push. We have to delete both local and remote branches as two seperate steps as follows:</p>
 

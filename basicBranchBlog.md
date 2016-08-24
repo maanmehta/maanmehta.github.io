@@ -13,7 +13,7 @@ This tutorial gives step-by-step instructions on how to do basic Github branch m
 4. Merge your `work` branch to `master` branch and push your changes (the merge) to the Github server
 5. Delete your both `work` branches - local and remote
 
-# 1. Create a new `work` branch from `master` branch
+# 1. Create a new *work* branch from *master* branch
 
 ## Android Studio
 
@@ -55,7 +55,7 @@ After the **Push**, you can browse the codebase of the new remote `work` branch 
     - Click on **2 Branches** and then click **All Branches** to view your branches<br><br>
     ![Current Weather](https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/allBranches.png)<br><br>
 
-# 2. Make code changes on local `work` branch, commit your changes and push your commits to the (Github) server
+# 2. Make code changes on local *work* branch, commit your changes and push your commits to the (Github) server
 
 Now, while you are using the local `work` branch, make some code changes and Commit and **Push** to the (Github) server. Note that unless you *Push*, your changes will remain in your local branch and will not be copied (pushed) to the remote `work` branch on the Github server.
 
@@ -83,7 +83,7 @@ Now, while you are using the local `work` branch, make some code changes and Com
     ![Current Weather](https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/checkoutWork01.png)<br><br>
     ![Current Weather](https://raw.githubusercontent.com/maanmehta/screenshots/master/branches/checkedoutWork01.png)<br><br>
 
-# 4. Merge your local `work` branch to local `master` branch and push your changes (the merge) to the remote `master` branch on the server
+# 4. Merge your local *work* branch to local *master* branch and push your changes (the merge) to the remote *master* branch on the server
 
 When you want to merge your code changes from branch B to branch A, you have to switch (checkout) to branch A and then execute the merge command and select Branch B. Git will then marge the current codebase of the Branch B to Branch A. And now, the codebase of branches A and B will be same. Keep in mind, at this point, all of this merge has been done to your branches A and B that are local to your computer and has not been pushed to their corresponding remote branches on the Github server. Therefore, you will need to execute a Git Push from your local computer (e.g. your Android Studio). Here are the steps that you can execute to merge all the commits you have made on your `work` branch to the `master` branch:
 
@@ -96,7 +96,7 @@ When you want to merge your code changes from branch B to branch A, you have to 
     - At this point, even though it seems that your merge has been completed, but it has only been completed on your local branches and has not been pushed to the remote branches on the Github server. You can verify this by checking on the Github website and you will notice that indeed the changes from the `work` branch have not been reflected on the remote `master` branch on the server.
     - Execute `Push` to merge your changes to the Github server
 
-# 5. Delete both local and remote `work` branches
+# 5. Delete both local and remote *work* branches
 
 Usually once a working branch is merged with the `master` branch and changes pushed to the remote `master` branch, the purpose of the `work` branch is done and we should delete it. One thing we need to be remember is that for branch deletion, we need to separately delete both local and remote copies of the `work` branch. We cannot just simply delete the local `work` branch and then expect that remote branch will be delete by a Git Push. We have to delete both local and remote branches as two seperate steps as follows:
 
